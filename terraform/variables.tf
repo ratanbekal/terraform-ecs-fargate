@@ -1,16 +1,16 @@
 variable "aws_region" {
   description = "The AWS region things are created in"
-  default     = "us-west-2"
+  default     = "us-east-2"
 }
 
 variable "az_count" {
   description = "Number of AZs to cover in a given region"
-  default     = "2"
+  default     = "1"
 }
 
 variable "app_image" {
-  description = "Docker image to run in the ECS cluster"
-  default     = "bradfordhamilton/crystal_blockchain:latest"
+  description = "Sample NodeJs App on Docker ECS cluster"
+  default     = "ratanbekal/docker-app1:latest"
 }
 
 variable "app_port" {
@@ -20,7 +20,7 @@ variable "app_port" {
 
 variable "app_count" {
   description = "Number of docker containers to run"
-  default     = 3
+  default     = 1
 }
 
 variable "ecs_autoscale_role" {
